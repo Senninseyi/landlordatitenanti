@@ -1,16 +1,15 @@
 import { AppProps } from 'next/app';
-import Head from 'next/head';
+import { ConfigProvider } from 'antd';
+
+import theme from '@/config/themeConfig';
 import './styles.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <title>Welcome to !</title>
-      </Head>
-      <main className="app">
+      <ConfigProvider theme={theme}>
         <Component {...pageProps} />
-      </main>
+      </ConfigProvider>
     </>
   );
 }

@@ -2,6 +2,9 @@
   "name": "@landlordatitenanti/backend",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "postman": "express-to-postman -i src/main.ts -o ./collections/api.json"
+  },
   "nx": {
     "targets": {
       "build": {
